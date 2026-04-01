@@ -1,0 +1,849 @@
+/* Global reset */
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header area */
+header {
+    background-image: url("back.jpeg");
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.image {
+    padding: 15%;
+}
+
+.name {
+    font-size: 50px;
+    padding: 25px;
+    font-family: "Playfair Display", serif;
+}
+
+.date {
+    border-top: 3px solid rgb(190, 137, 137);
+    border-bottom: 3px solid rgb(190, 137, 137);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width: 30%; 
+    margin: 30px auto 0;
+    
+}
+
+.image h3 {
+    font-size: 1.35rem;
+    padding-top: 10px;
+}
+
+.invite p {
+    font-size: 30px;
+    padding: 15px;
+}
+
+p {
+    padding: 23px;
+}
+
+.om {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-image: url("ohm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    /* center */
+}
+
+b {
+    color: rgb(237, 146, 34);
+}
+
+/* Story / main section */
+.main {
+    background-color: rgb(167, 160, 153);
+    min-height: 600px;
+    width: 100%;
+    color:rgb(51, 48, 48);
+}
+
+.story h1 {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px;
+    color: rgb(67, 65, 65);
+    text-decoration: underline;
+}
+
+.contenarpic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+}
+
+.pic {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.boxname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34%;
+    font-family: "Playfair Display", serif;
+}
+
+.boxname p {
+    font-size: 3rem;
+}
+
+.boxtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.boxtext p {
+    font-size: 1.6rem;
+    font-family: "Playfair Display", serif;
+   
+}
+
+.para {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 60px;
+font-family: "Playfair Display", serif;
+}
+
+/* Timeline section */
+body {
+    background: #2b0000;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: auto;
+}
+
+.timeline-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #2b0000;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    /* was 0, so line was invisible */
+    background: #ff4d6d;
+    transform: translateX(-50%);
+    transition: height 1s ease;
+}
+
+.event {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+    position: relative;
+    opacity: 1;
+    /* was 0, so hidden without JS */
+    transform: translateY(0);
+    transition: 0.10s;
+   
+} 
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background:rgb(240, 176, 16);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgb(240, 176, 16); 
+   
+} 
+.event{
+
+   font-size: 1.20rem;
+   align-items: center;
+    display: block; 
+   padding-bottom: 50px;
+}
+
+
+.engegment {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    margin-left: 50px;
+  
+  
+ 
+   
+}
+
+.haldi{
+    background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        backdrop-filter: blur(10px);
+        margin-left: 450px;
+}
+
+.mehandi {
+    background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        backdrop-filter: blur(10px);
+        margin-left: 50px;
+      
+   
+
+}
+
+
+.shadi {
+    background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        backdrop-filter: blur(10px);
+        margin-left: 450px;
+ 
+    
+   
+}
+
+.event:nth-child(odd) .card {
+    margin-right: 300px;
+}
+
+.event:nth-child(even) .card {
+    margin-left: 300px;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    --line-height: 0%;
+    /* default 0, will be updated via JS */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: var(--line-height);
+    /* use CSS variable */
+    background: #ff4d6d;
+    transform: translateX(-50%);
+    transition: height 0.6s ease;
+}
+
+.blessing{
+
+    background-color: rgb(229, 222, 200);
+    color:rgb(82, 79, 79);
+    height: 1100px;
+    width: 100%;
+    display: flex;
+     align-items: center; 
+     justify-content: center; 
+    gap:1%;
+    padding-bottom: 50px;
+    overflow: hidden;
+
+
+}
+
+.text{
+
+    border: 4px dotted goldenrod;
+    height: 450px;
+    width:580px;
+    text-align: center;
+    margin-left:35px;
+   
+}
+
+.grooms{
+
+    font-size: 1.25rem;
+   
+    font-family: Arial, Helvetica, sans-serif; 
+    padding-top:40px;
+}
+
+.grooms p{
+    color:rgb(242, 175, 6);
+    font-size: 1.25rem;
+    font-weight:400;
+    
+}
+
+.brides{
+
+    padding-top:15px;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom:10px;
+}
+
+.brides p{
+    color: rgb(242, 175, 6);
+        font-size: 1.25rem;
+        font-weight: 400;
+}
+
+.text h2{
+
+    font-size: 1.50rem;
+    padding:5px;
+}
+
+.map{
+
+    border:2px solid white;
+    height:500px;
+    width:600px;
+    text-align:center;
+     padding-top:30px; 
+     background-color: aliceblue;
+     font-size:1.25rem;
+     border-radius: 20px;
+     margin-right:20px;
+}
+
+.mapview{
+
+    height:350px;
+    width:550px;
+    padding:10px;
+    padding-left:15px;
+ 
+
+}
+
+.line{
+    border-right: 4px solid rgb(233, 169, 6);
+   width:650px;
+   height:500px;
+   padding:5px;
+}
+
+.lastbutton button{
+
+    height:50px;
+    width:200px;
+    background-color: #3104d5;
+ 
+    border-radius: 15px;
+    color: aliceblue;
+
+
+}
+
+.backcolor
+{
+    background-color: rgb(229, 222, 200);
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width:700px){
+    *{
+        border:none;
+        margin: 0;
+        padding: o;
+        box-sizing: border-box;
+    }
+
+
+    
+        header {
+            background-image: url("back.jpeg");
+            height: 750px;
+            width: 100%;
+            margin:0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+        }
+    
+        .image {
+            padding: 15%;
+        }
+    
+        .name {
+             font-size: 50px; 
+             text-align: left;
+             padding-left:0px; 
+            font-family: "Playfair Display", serif;
+          
+            white-space: nowrap;  
+        }
+    
+        .date {
+            border-top: 3px solid rgb(190, 137, 137);
+            border-bottom: 3px solid rgb(190, 137, 137);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 30px auto 0;
+    
+        }
+    
+        .image h3 {
+            font-size: 1.35rem;
+            padding-top: 10px;
+            font-family: "Playfair Display", serif;
+        }
+    
+        .invite p {
+            font-size: 25px;
+             padding: 10px; 
+            font-family: "Playfair Display", serif;
+        }
+    
+        p {
+            padding: 23px;
+        }
+    
+        .om {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-image: url("ohm.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            /* center */
+        }
+    
+        b {
+            color: rgb(237, 146, 34);
+        }
+    
+        /* Story / main section */
+        .main {
+            background-color: rgb(167, 160, 153);
+            min-height: 1000px;
+            width: 100%;
+            color: rgb(51, 48, 48);
+        }
+    
+        .story h1 {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 35px;
+            color: rgb(67, 65, 65);
+            text-decoration: underline;
+            white-space: nowrap;
+        }
+    
+        .contenarpic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8%;
+        }
+    
+        .pic {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            background-color: aqua;
+        }
+    
+        .boxname {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0%;
+            font-family: "Playfair Display", serif;
+        }
+    
+        .boxname p {
+            font-size: 2.20rem;
+        }
+    
+        .boxtext {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+        }
+    
+        .boxtext p {
+            font-size: 1.10rem;
+            font-family: "Playfair Display", serif;
+            font-weight: 20px;
+    
+        }
+    
+        .para {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0px;
+            font-family: "Playfair Display", serif;
+        }
+    
+        /* Timeline section */
+        body {
+            background: #2b0000;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: auto;
+        }
+    
+        .timeline-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #2b0000;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+    
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+    
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            /* was 0, so line was invisible */
+            background: #ff4d6d;
+            transform: translateX(-50%);
+            transition: height 1s ease;
+        }
+    
+        .event {
+            display: flex;
+            justify-content: center;
+            margin: 0px 0;
+            position: relative;
+            opacity: 1;
+            /* was 0, so hidden without JS */
+            transform: translateY(0);
+            transition: 0.10s;
+             display: flex;
+             flex-direction: column;
+        }
+    
+        .circle {
+            width: 20px;
+            height: 20px;
+            background: rgb(240, 176, 16);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgb(240, 176, 16);
+    
+        }
+    
+        .event {
+              
+            font-size: 1.20rem;
+            align-items: center;
+            display: block;
+            padding-bottom: 50px;
+            margin-left:20px;
+        }
+    
+    
+        .engegment {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            width: 250px;
+            backdrop-filter: blur(0px);
+            /* margin-left: 50px;  */
+    
+    
+    
+    
+        }
+    
+        .haldi {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            width: 250px;
+            backdrop-filter: blur(0px);
+            /* margin-left: 450px; */
+        }
+    
+        .mehandi {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            width: 250px;
+            backdrop-filter: blur(0px);
+            margin-left: 50px;
+    
+    
+    
+        }
+    
+    
+        .shadi {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            width: 250px;
+            backdrop-filter: blur(0px);
+            margin-left: 550px;
+    
+    
+    
+        }
+    
+        .event:nth-child(odd) .card {
+            margin-right: 300px;
+        }
+    
+        .event:nth-child(even) .card {
+            margin-left: 300px;
+        }
+    
+    
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            --line-height: 0%;
+            /* default 0, will be updated via JS */
+        }
+    
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: var(--line-height);
+            /* use CSS variable */
+            background: #ff4d6d;
+            transform: translateX(-50%);
+            transition: height 0.6s ease;
+        }
+    
+        .blessing {
+    
+            background-color: rgb(229, 222, 200);
+            color: rgb(82, 79, 79);
+            height: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            gap: 10%;
+            padding-bottom: 0px;
+            flex-wrap:wrap;
+            flex-direction: row;
+    
+        }
+    
+        .text {
+    
+             border: 4px dotted goldenrod;
+            height: 450px;
+            width: 300px;
+            text-align: center;
+            margin-left: 0px;
+            margin-top: 50px;
+    
+        }
+
+        .line{
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .grooms {
+    
+            font-size: 1rem;
+    
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 20px;
+        }
+    
+        .grooms p {
+            color: rgb(242, 175, 6);
+            font-size: 1rem;
+            font-weight: 400;
+    
+        }
+    
+        .brides {
+    
+            padding-top: 0px;
+            font-size: 1.1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 0px;
+        }
+    
+        .brides p {
+            color: rgb(242, 175, 6);
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+    
+        .text h2 {
+    
+            font-size: 1.50rem;
+            padding: 5px;
+        }
+    
+
+   .line {
+         border-bottom: 4px solid rgb(233, 169, 6);
+         border-top: 4px solid rgb(233, 169, 6);
+         border-right: none;
+         width: 700px;
+        height: 540px;
+        margin-top: 20px;
+      } 
+
+  .timeline {
+      max-width: 100%;
+  } 
+
+   .timeline::before {
+      left: 0px;
+       move-line :to left; 
+      transform: translateX(0); 
+  }  
+/* 
+  .event {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 30px 0;
+      padding-bottom: 20px;
+  }  */
+
+   .circle {
+      left:-28px;
+       transform: translateX(0); 
+       top:-20px;
+  }  
+
+ .event:nth-child(odd) .card,
+  .event:nth-child(even) .card {
+      margin-left: 80;
+      margin-right: 0;
+      width: 100%;
+  }  
+
+ 
+    .haldi,
+  .mehandi,
+  .shadi, 
+   .engegment {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 10px;
+  } 
+
+
+
+
+
+  .map {
+
+      border: 2px solid white;
+      height: 450px;
+      width: 300px;
+      text-align: center;
+      padding-top: 10px;
+      background-color: aliceblue;
+      font-size: 1.10rem;
+      border-radius: 20px;
+      margin-right: 10px;
+  }
+
+  .mapview {
+
+      height: 150px;
+      width: 250px;
+      padding: 4px;
+      padding-left: 15px;
+      
+
+
+  }
+
+  .lastbutton button {
+
+      height: 50px;
+     min-width:100%;
+      background-color: #fb07d2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* margin-left: 50px; */
+      border-radius: 15px;
+      color: aliceblue;
+  
+
+
+  }
+
+}
+
+
+

@@ -1,0 +1,155 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Fix */
+body {
+    background-image: url(openback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    /* change */
+    overflow-x: hidden;
+    /* important fix */
+    font-family: system-ui, -apple-system, sans-serif; 
+}
+
+/* Container */
+.curtain-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* change */
+    overflow: hidden;
+    /* add */
+}
+
+/* Curtains */
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url(red.png);
+    background-size: cover;
+    background-position: center;
+    /* add */
+    z-index: 2;
+    transition: transform 2s ease-in-out;
+}
+
+/* Left curtain */
+.left {
+    left: 0;
+    border-right: 3px solid gold;
+}
+
+/* Right curtain */
+.right {
+    right: 0;
+    border-left: 3px solid gold;
+}
+
+/* Animation */
+.open-left {
+    transform: translateX(-100%);
+}
+
+.open-right {
+    transform: translateX(100%);
+}
+
+/* Content */
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-size:clamp(2.5rem,5vm,3rem);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 2s ease;
+    padding: 20px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+.show-content {
+    opacity: 1;
+}
+
+.content h1 {
+    text-shadow: 0 0 20px gold;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+
+/* Paragraph FIX */
+.para {
+    width: 100%;
+    max-width: 650px;
+    /* reduce for mobile */
+     font-size: clamp(2.20rem, 3.5vw, 1.4rem); 
+    line-height: 1.5;
+    padding-top:20px;
+    font-family: "Playfair Display", serif;
+}
+
+/* Button */
+button {
+    height: 50px;
+    width: 300px;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    background-color: rgb(160, 161, 161);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+button:hover {
+    background-color: rgb(214, 51, 152);
+    transform: scale(1.05);
+}
+
+.bu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Small screens */
+@media (max-width: 680px) {
+    .content {
+        padding: 25px;
+
+    }
+
+    .para {
+        max-width: 95%;
+   
+
+    }
+
+    .para p{
+        font-size: 6vw;
+    }
+ 
+
+
+}
+
+
+
+

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curtain Animation</title>
+    <link rel="stylesheet" href="open.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="back">
+
+    <div class="curtain-container">
+        <div class="curtain left"></div>
+        <div class="curtain right"></div>
+
+        <div class="content">
+            <h1>Welcome</h1>
+
+            <div class="para">
+                <p>On  this auspicious occasion,we warmly invite you to join us and make our happiness even more special. your presence  will be the greatest gift to us. kindlly  honor us with you presence.</p>
+            </div>
+<div class="bu">
+    <button onclick="main()">Click here</button>
+</div>
+        </div>
+       
+    </div>
+
+    </div>
+    
+
+
+    <script >
+
+    function main() {
+        window.location.href = "index.html";
+    }
+
+  // pehle globally elements ko access karo
+    let left, right, content;
+
+    // sleep helper (Promise + setTimeout)
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    window.onload = () => {
+        left = document.querySelector(".left");
+        right = document.querySelector(".right");
+        content = document.querySelector(".content");
+
+        getCall();   // page load hone ke baad animation start
+    };
+
+    async function getCall() {
+        // 3 sec baad parda open
+        await sleep(2000);
+        left.classList.add("open-left");
+        right.classList.add("open-right");
+
+        // aur 3 sec baad content show
+        await sleep(2000);
+        content.classList.add("show-content");
+    }
+
+
+
+    </script>
+</body>
+
+</html>

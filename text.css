@@ -1,0 +1,236 @@
+*{
+    border: none;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:200px;
+    background-image: url(red.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.text{
+    display: block;
+  
+ 
+   text-align: center;
+   padding:0px;
+
+   border:2px solid rgb(241, 223, 124);
+   backdrop-filter:blur(15px) ;
+   height:500px;
+   width:600px;
+   border-radius: 15px;
+ 
+}
+
+.invite h3{
+text-decoration: underline;
+
+   
+}
+
+ h2{
+    font-size: 2rem;
+  padding-bottom: 20px;
+  padding-top:20px;
+font-family: "Playfair Display", serif;
+color:rgb(248, 1, 1);
+
+}
+
+#welcome{
+    font-size: 2rem;
+    color:rgb(227, 165, 8);
+
+  
+word-spacing:5px;
+}
+
+#welcome i{
+    color:white;
+ 
+}
+
+.invite{
+
+    color:rgb(221, 174, 5);
+    font-family: "Playfair Display", serif;
+    padding:20px;
+    padding-bottom: 30px;
+
+    font-size: 1.80rem;
+
+
+}
+
+.name{
+
+    font-size: 1.30rem;
+    padding:30px;
+    color:aliceblue;
+    font-family: "Playfair Display", serif; 
+
+}
+
+ button{
+
+    font-size: 1.70rem;
+    height:60px;
+    width:400px;
+  
+    margin-top: 10px;
+    background: transparent;
+    border:2px solid gold;
+    color:rgb(172, 169, 169);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+
+} 
+
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:rgb(233, 168, 3);
+    z-index: -1;
+    transition: 0.4s;
+}
+
+/* Hover effect */
+button:hover::before {
+    width: 100%;
+}
+
+button:hover {
+    color: rgb(211, 11, 11);
+}
+@media (max-width: 700px) {
+    * {
+        border: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 0px;
+        background-image: url("red.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 90vw;
+        width: 100%;
+        height: auto;
+        padding: 20px 20px 30px;
+        border: 2px solid rgb(241, 223, 124); 
+        /* backdrop-filter: blur(10px); */
+        border-radius: 15px;
+        margin: 20px auto;
+        border:none;
+       
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+       
+        font-family: "Playfair Display", serif;
+        color: aliceblue;
+        text-align: center;
+    }
+
+    #welcome {
+        font-size: 1.6rem;
+        color: rgb(227, 165, 8);
+        word-spacing: 2px;
+        text-align: center;
+        margin: 0 0 15px;
+    }
+
+    .name {
+        font-size: 0.86rem;
+        /* padding: 20px 15px; */
+        color: aliceblue;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        max-width: 100%;
+        font-family: "Playfair Display", serif;
+        padding:0;
+
+    }
+
+    button {
+        font-size: clamp(1.1rem, 4vw, 1.7rem);
+        height: 50px;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 15px;
+        background: transparent;
+        border: 2px solid gold;
+        color: rgb(172, 169, 169);
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 8px;
+    }
+
+    button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: rgb(233, 168, 3);
+        z-index: -1;
+        transition: width 0.4s ease;
+    }
+
+    button:hover::before {
+        width: 100%;
+    }
+
+    button:hover {
+        color: rgb(211, 11, 11);
+    }
+
+
+        .invite {
+    
+            color: rgb(221, 174, 5);
+            font-family: "Playfair Display", serif;
+            padding-top: 10px;
+    
+            font-size: 1.50rem;
+    
+    
+        }
+}

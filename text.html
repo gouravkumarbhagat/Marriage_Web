@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name </title>
+    <link rel="stylesheet" href="text.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+<div class="text">
+     <h2>|| श्री गणेशाय नमः ||</h2>
+
+        <div class="invite">
+            <h3><i>Wedding Invitation</i></h3>
+            <p>20 April 2026</p>
+        </div>
+
+    <h3 id="welcome"></h3> 
+
+    <div class="name">
+    
+        <h1>Khushbu  & Amarjeet</h1>
+    
+    </div>
+
+    <button onclick="gotopage()">Open   Invitztion</button>
+    </div>
+
+    
+
+
+    <script>
+
+        function gotopage() {
+            window.location.href= "open.html";
+        }
+        const name = localStorage.getItem("username");
+        document.getElementById("welcome").innerHTML = 
+        "Dear  ❤️<i> "  +  name  +  ". </i>  ❤️  you are invited";
+
+
+
+       
+
+    </script>
+
+</body>
+
+</html>
