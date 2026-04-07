@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Curtain Animation</title>
     <link rel="stylesheet" href="open.css">
+    <link rel="stylesheet" href="sound.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
@@ -29,47 +30,71 @@
 <div class="bu">
     <button onclick="main()">Click here</button>
 </div>
-        </div>
-       
-    </div>
-
-    </div>
-    
 
 
-    <script >
 
+<!-- Audio -->
+<audio id="music" src="a3.mp3" loop autoplay></audio>
+
+<!-- Sound Button -->
+<div class="sound" id="sound" onclick="toggleSound()"></div>
+
+<script>
     function main() {
         window.location.href = "index.html";
     }
 
-  // pehle globally elements ko access karo
-    let left, right, content;
-
-    // sleep helper (Promise + setTimeout)
+    // sleep helper
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
+
+    let left, right, content;
+    let music, btn;
 
     window.onload = () => {
         left = document.querySelector(".left");
         right = document.querySelector(".right");
         content = document.querySelector(".content");
 
-        getCall();   // page load hone ke baad animation start
+        music = document.getElementById("music");
+        btn = document.getElementById("sound");
+
+        // start curtain animation
+        getCall();
+
+        // starting icon (sound off)
+        btn.style.backgroundImage = "url('no_sound.png')";
     };
 
     async function getCall() {
-        // 3 sec baad parda open
+        function toggleSound() {
+            if (music.paused) {
+                music.play();
+                btn.style.backgroundImage = "url('volume_up.png')"; // ON icon
+            } else {
+                music.pause();
+                btn.style.backgroundImage = "url('no_sound.png')";  // OFF icon
+            }
+        }
         await sleep(2000);
         left.classList.add("open-left");
         right.classList.add("open-right");
 
-        // aur 3 sec baad content show
         await sleep(2000);
         content.classList.add("show-content");
     }
 
+    // function toggleSound() {
+    //     if (music.paused) {
+    //         music.play();
+    //         btn.style.backgroundImage = "url('volume_up.png')"; // ON icon
+    //     } else {
+    //         music.pause();
+    //         btn.style.backgroundImage = "url('no_sound.png')";  // OFF icon
+    //     }
+    // }
+</script>
 
 
     </script>

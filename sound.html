@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sound.css">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="music" src="a1.mp3" loop></audio>
+    </div>
+    <div class="sound" onclick="toggleSound()"id="SoundBtn"></div>
+    </div>
+
+
+   <script>
+    const music = document.getElementById("music");
+    const btn = document.getElementById("sound");
+
+    function toggleSound() {
+        if (music.paused) {
+            music.play();
+            btn.style.backgroundImage = "url(volume_up.png)";   // ON icon
+        } else {
+            music.pause();
+            btn.style.backgroundImage = "url(no_sound.png)";  // OFF icon
+        }
+    }
+</script>
+</body>
+</html>

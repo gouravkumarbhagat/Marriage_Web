@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name </title>
     <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="sound.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 </head>
@@ -29,6 +30,10 @@
 
     <button onclick="gotopage()">Open   Invitztion</button>
     </div>
+<audio id="music" src="a1.mp3" loop></audio>
+</div>
+<div class="sound" onclick="toggleSound()" id="SoundBtn"></div>
+</div>
 
     
 
@@ -42,7 +47,20 @@
         document.getElementById("welcome").innerHTML = 
         "Dear  ❤️<i> "  +  name  +  ". </i>  ❤️  you are invited";
 
+    const music = document.getElementById("music");
+    const btn = document.getElementById("sound");
 
+
+
+        function toggleSound() {
+                if (music.paused) {
+                    music.play();
+                    btn.style.backgroundImage = "url('volume_up.png')"; // ON icon
+                } else {
+                    music.pause();
+                    btn.style.backgroundImage = "url('no_sound.png')";  // OFF icon
+                }
+            }
 
        
 

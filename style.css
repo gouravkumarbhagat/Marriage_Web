@@ -94,11 +94,25 @@ b {
     gap: 30%;
 }
 
-.pic {
+.pic1 {
     height: 300px;
     width: 300px;
     border-radius: 50%;
     background-color: aqua;
+    background-image: url(ladki.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform:scalex(-1);
+}
+
+.pic2{
+    height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: aqua;
+        background-image: url(ladka.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .boxname {
@@ -170,7 +184,7 @@ body {
 .event {
     display: flex;
     justify-content: center;
-    margin: 80px 0;
+     margin: 80px 0; 
     position: relative;
     opacity: 1;
     /* was 0, so hidden without JS */
@@ -201,11 +215,12 @@ body {
 
 .engegment {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    padding: none;
+    border-radius: 15px;
     width: 250px;
     backdrop-filter: blur(10px);
     margin-left: 50px;
+    border: 3px solid goldenrod;
   
   
  
@@ -214,20 +229,38 @@ body {
 
 .haldi{
     background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
+        padding: 0px;
+        border-radius: 15px;
         width: 250px;
         backdrop-filter: blur(10px);
         margin-left: 450px;
+        border: 3px solid goldenrod;
+}
+
+.haldi h3{
+    padding-top:5px;
+}
+
+.engegment h3 {
+    padding-top: 5px;
+}
+
+.mehandi h3 {
+    padding-top: 5px;
+}
+
+.shadi h3{
+    padding-top: 5px;
 }
 
 .mehandi {
     background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
+        padding: 0px;
+        border-radius: 15px;
         width: 250px;
         backdrop-filter: blur(10px);
         margin-left: 50px;
+        border: 3px solid goldenrod;
       
    
 
@@ -236,11 +269,12 @@ body {
 
 .shadi {
     background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
+        padding: 0px;
+        border-radius: 15px;
         width: 250px;
         backdrop-filter: blur(10px);
         margin-left: 450px;
+        border: 3px solid goldenrod;
  
     
    
@@ -258,8 +292,8 @@ body {
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: auto;
-    --line-height: 0%;
+    /* margin: auto; */
+    /* --line-height: 0%; */
     /* default 0, will be updated via JS */
 }
 
@@ -388,6 +422,34 @@ body {
 }
 
 
+
+.flowers {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.flower {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+
 @media (max-width:700px){
     *{
         border:none;
@@ -493,12 +555,19 @@ body {
             gap: 8%;
         }
     
-        .pic {
+        .pic1 {
             height: 140px;
             width: 140px;
             border-radius: 50%;
             background-color: aqua;
         }
+
+                 .pic2 {
+                     height: 140px;
+                     width: 140px;
+                     border-radius: 50%;
+                     background-color: aqua;
+                 }
     
         .boxname {
             display: flex;
@@ -578,6 +647,7 @@ body {
             transition: 0.10s;
              display: flex;
              flex-direction: column;
+             
         }
     
         .circle {
@@ -599,15 +669,17 @@ body {
             display: block;
             padding-bottom: 50px;
             margin-left:20px;
+         
         }
     
     
         .engegment {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 0px;
             border-radius: 20px;
             width: 250px;
             backdrop-filter: blur(0px);
+            border: 3px solid goldenrod;
             /* margin-left: 50px;  */
     
     
@@ -617,20 +689,22 @@ body {
     
         .haldi {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 0px;
             border-radius: 20px;
             width: 250px;
             backdrop-filter: blur(0px);
+            border: 2px solid rgb(245, 178, 8);
             /* margin-left: 450px; */
         }
     
         .mehandi {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 0px;
             border-radius: 20px;
             width: 250px;
             backdrop-filter: blur(0px);
             margin-left: 50px;
+            border: 2px solid goldenrod;
     
     
     
@@ -639,11 +713,12 @@ body {
     
         .shadi {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 0px;
             border-radius: 20px;
             width: 250px;
             backdrop-filter: blur(0px);
             margin-left: 550px;
+            border: 2px solid goldenrod;
     
     
     

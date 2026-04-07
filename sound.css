@@ -1,0 +1,21 @@
+.sound {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(148, 131, 131);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    background-image: url(volume_up.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+}

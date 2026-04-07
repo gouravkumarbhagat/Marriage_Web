@@ -90,16 +90,17 @@ body {
 
 .content h1 {
     text-shadow: 0 0 20px gold;
-    margin-bottom: 1rem;
-    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-size: 7rem;
 }
 
 /* Paragraph FIX */
 .para {
     width: 100%;
-    max-width: 650px;
+    max-width: 800px;
     /* reduce for mobile */
-     font-size: clamp(2.20rem, 3.5vw, 1.4rem); 
+     /* font-size: clamp(2.20rem, 3.5vw, 1.4rem);  */
+     font-size: 50px;
     line-height: 1.5;
     padding-top:20px;
     font-family: "Playfair Display", serif;
@@ -107,15 +108,15 @@ body {
 
 /* Button */
 button {
-    height: 50px;
-    width: 300px;
-    border-radius: 15px;
-    font-size: 1.25rem;
-    background-color: rgb(160, 161, 161);
+    height: 90px;
+    width: 450px;
+    border-radius: 20px;
+    font-size: 2.55rem;
+    background-color: rgb(241, 87, 172);
     color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 button:hover {
@@ -129,6 +130,7 @@ button:hover {
     align-items: center;
 }
 
+
 /* Small screens */
 @media (max-width: 680px) {
     .content {
@@ -137,15 +139,20 @@ button:hover {
     }
 
     .para {
-        max-width: 95%;
+        max-width: 97%;
+       
+        
    
 
     }
 
     .para p{
-        font-size: 6vw;
+        font-size: 9vw;
     }
+
+
  
+
 
 
 }
