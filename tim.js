@@ -30,7 +30,9 @@ window.onload = () => {
   btn.style.backgroundImage = "url('no_sound.png')";
   btn.style.backgroundSize = "cover";
   btn.style.backgroundPosition = "center";
+
 };
+
 
 function toggleSound() {
   if (music.paused) {
@@ -41,6 +43,7 @@ function toggleSound() {
     btn.style.backgroundImage = "url('no_sound.png')"; // OFF icon
   }
 }
+// window.addEventListener("load", toggleSound());
 
 function lastclick() {
   window.location.href = "last.html";
